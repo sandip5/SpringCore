@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="mathCheat" class="com.sandip.spring.di_object.MathCheat"/>
+    <bean id="scienceCheat" class="com.sandip.spring.di_object.SciencceCheat"/>
+
+    <bean id="student" class="com.sandip.spring.di_object.Student">
+        <property name="cheat" ref="mathCheat"/>
+    </bean>
+
+    <bean id="anotherStudent" class="com.sandip.spring.di_object.AnotherStudent">
+        <property name="cheat" ref="scienceCheat"/>
+    </bean>
+</beans>
